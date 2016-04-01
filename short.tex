@@ -1,0 +1,158 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% Using this space to override existing commands
+\newbox{\cventrymainbox} % create box to be measured
+\newlength{\cventrymainlength} % create main length variable
+\newlength{\cventrycitylength} % create city length variable
+\renewcommand*{\cventry}[7][.25em]{%
+  % Define box based on 3rd and optional 4th arguments
+  \savebox{\cventrymainbox}{{\bfseries#3}
+    \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}.}} % end box
+  % set main length based on size of box
+  \setlength{\cventrymainlength}{\widthof{\usebox{\cventrymainbox}}}
+  % Set city length based on space leftover
+  \setlength{\cventrycitylength}{\maincolumnwidth-\separatorcolumnwidth-\cventrymainlength}
+  
+  \cvitem[#1]{#2}{%
+    \begin{minipage}[t]{\cventrymainlength}
+    {\bfseries#3}% bfseries causes all following text to be boldface 
+    \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}.}% slshape causes all following text to be italicized
+    \end{minipage}
+    \ifthenelse{\equal{#5}{}}{}{\begin{minipage}[t]{\cventrycitylength}\raggedleft#5\end{minipage}}%
+    \ifthenelse{\equal{#6}{}}{}{\newline #6}%
+    \strut%
+    \ifx&#7&%
+      \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+
+% end command overrides
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Eric}{Madar}
+%\title{Resume title}                               % optional, remove / comment the line if not wanted
+\address{700 15th Ave.}{San Francisco, CA 94118}%{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+1~(216)~310~4392}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{edmadar@gmail.com}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+\social[linkedin]{ericmadar}                        % optional, remove / comment the line if not wanted
+\social[twitter]{EdmElec}                             % optional, remove / comment the line if not wanted
+\social[github]{saber3005}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[96pt][0.4pt]{L60A0819_2.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{My objective is to find an engineering career where I can make an impact and build something that real people will use.}% optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\makecvtitle
+
+
+\section{Experience}
+%\subsection{Vocational}
+\cventry{2015-2016}{SpareHire, Inc}{Senior Software Engineer}{San Francisco, CA}{}{
+	Full-stack PHP web development position.
+	\begin{itemize}
+	\item Designed and implemented a flexible architecture for searching or filtering Users and displaying the results
+	\end{itemize}	
+}
+\cventry{2014-2015}{Revinate, Inc}{Software Engineer}{San Francisco, CA}{}{
+	Full-stack PHP web development position.
+	\begin{itemize}
+	\item Lead development of a critical partner integration project which stopped the shutdown of one of our key features within first 9 months	
+	\item Developed a more powerful and user-friendly dashboard for our fastest-growing service
+	\item Drove several improvement projects, such as packaging xDebug for internal use (finished), fixing our broken usage of Composer (finished) and modernizing our Javascript environment (ongoing)
+	\item Mentored a new engineer within first 12 months
+	\item Bonus: Ask me about the hackathon
+	\end{itemize}	
+}
+\cventry{2012-2014}{Google Inc.}{Internal Technology Resident}{Mountain View, CA}{}{
+Fixed-Term Residency supporting and improving Google's infrastructure.
+\begin{itemize}
+\item Contributed to several software development projects for internal tools
+\item Completed a three-month engineering rotation on the Android@Home team
+\item Worked in an on-call support environment on complex issues that stumped 1st-level techs
+\item Served as a point of contact and intermediary for a wide range of infrastructure teams
+\end{itemize}
+}
+\cventry{2011}{Vigilant Medical}{Web Developer}{Baltimore, MD}{}{
+Internship focusing on Ruby on Rails.
+\begin{itemize}%
+\item Developed a mission-critical database interface for analysis of usage and service data
+\item Designed front-facing interface for a MongoDB server in a startup environment
+\end{itemize}}
+%\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+%\subsection{Miscellaneous}
+
+\section{Education}
+\cventry{2008-2012}{Johns Hopkins University}{Bachelor of Science}{Baltimore, MD}{\textit{GPA: 3.64}}{Biomedical Engineering with Instrumentation (Electrical Engineering) focus.}  % arguments 3 to 6 can be left empty
+
+\section{Skills}
+\begin{cvcolumns}
+  \cvcolumn{Technologies}{
+  \begin{itemize}
+  	\item PHP
+  	\item Symfony (1 and 2)
+  	\item Python
+  	\item Ruby
+  	\item HTML/CSS
+  	\item jQuery
+  	\item MySQL
+  	\item Elasticsearch
+  	\item Redis
+  \end{itemize}
+  }
+  \cvcolumn{System Admin}{
+  \begin{itemize}
+  	\item Linux
+  	\item AWS
+  	\item Chef
+  \end{itemize}
+  }
+%  \cvcolumn{Hardware}{
+%  \begin{itemize}
+%  	\item Circuit Design
+%  	\item  PCB Layout Design
+%  \end{itemize}
+%  }
+\end{cvcolumns}
+
+
+%\clearpage\end{CJK*} % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
