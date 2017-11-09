@@ -34,7 +34,7 @@
   \cvitem[#1]{#2}{%
     \begin{minipage}[t]{\cventrymainlength}
     {\bfseries#3}% bfseries causes all following text to be boldface 
-    \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}.}% slshape causes all following text to be italicized
+    \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}% slshape causes all following text to be italicized
     \end{minipage}
     \ifthenelse{\equal{#5}{}}{}{\begin{minipage}[t]{\cventrycitylength}\raggedleft#5\end{minipage}}%
     \ifthenelse{\equal{#6}{}}{}{\newline #6}%
@@ -52,7 +52,7 @@
 % personal data
 \name{Eric}{Madar}
 %\title{Resume title}                               % optional, remove / comment the line if not wanted
-\address{2936 West St.}{Oakland, CA 94608}%{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\address{2936 West Street}{Oakland, CA 94608}%{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+1~(216)~310~4392}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
@@ -103,13 +103,13 @@
 \cventry{2014-2015}{Revinate, Inc}{Software Engineer}{San Francisco, CA}
 	{Full-stack Web development position (PHP)}{
 	\begin{itemize}
-	\item Lead development of a critical partner integration project within first 9 months	
+	\item Lead development of a critical partner integration project within first 9 months
 	\item Drove several improvement projects, such as packaging xDebug for internal use, fixing our broken usage of Composer and modernizing our Javascript environment
 	\item Mentored a new engineer within first 12 months
 	\end{itemize}	
 }
 \cventry{2012-2014}{Google Inc.}{Internal Technology Resident}{Mountain View, CA}
-	{Fixed-Term Residency supporting and improving Google's infrastructure.}{
+	{Fixed-Term Residency supporting and improving Google's infrastructure}{
 	\begin{itemize}
 	\item Worked as a second-tier technician in an on-call support environment
 	\item Contributed to several software development projects for internal tools
