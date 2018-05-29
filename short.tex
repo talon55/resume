@@ -30,10 +30,10 @@
   \setlength{\cventrymainlength}{\widthof{\usebox{\cventrymainbox}}}
   % Set city length based on space leftover
   \setlength{\cventrycitylength}{\maincolumnwidth-\separatorcolumnwidth-\cventrymainlength}
-  
+
   \cvitem[#1]{#2}{%
     \begin{minipage}[t]{\cventrymainlength}
-    {\bfseries#3}% bfseries causes all following text to be boldface 
+    {\bfseries#3}% bfseries causes all following text to be boldface
     \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}% slshape causes all following text to be italicized
     \end{minipage}
     \ifthenelse{\equal{#5}{}}{}{\begin{minipage}[t]{\cventrycitylength}\raggedleft#5\end{minipage}}%
@@ -56,11 +56,11 @@
 \phone[mobile]{+1~(216)~310~4392}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
-\email{edmadar@gmail.com}                               % optional, remove / comment the line if not wanted
+\email{eric.d.madar@gmail.com}                               % optional, remove / comment the line if not wanted
 %\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
 \social[linkedin]{ericmadar}                        % optional, remove / comment the line if not wanted
 \social[twitter]{EdmElec}                             % optional, remove / comment the line if not wanted
-\social[github]{saber3005}                              % optional, remove / comment the line if not wanted
+\social[github]{talon55}                              % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 %\photo[96pt][0.4pt]{L60A0819_2.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{My objective is to find an engineering career where I can make an impact and build something that real people will use.}% optional, remove / comment the line if not wanted
@@ -82,13 +82,13 @@
 
 
 \section{Experience}
-\cventry{2016-Current}{Spotify AB}{Developer}{San Francisco, CA}
+\cventry{2016-Current}{Spotify USA Inc.}{Developer}{San Francisco, CA}
 	{Full-stack Web Development position (React.js/Java)}{
 	\begin{itemize}
 	\item Continued development of the React web app from Preact
-	\item Oversaw a major refactoring effort (nearly all code rewritten)
 	\item Rewrote the build/deploy pipeline from scratch using Docker, Webpack2, and Jenkins
 	\item Took ownership of the backend API after it was rewritten in Java
+  \item Designed and implemented a new architecture for the Java backend with a focus on testability
 	\end{itemize}
 }
 \cventry{2016}{Preact, Inc}{Software Engineer}{San Francisco, CA}
@@ -97,7 +97,7 @@
 	\item Developed a single-page React.js web app on a Node.js API
 	\item Worked on a multifuctional team to quickly iterate on new features (ask me!)
 	\item Made critical architectural decisions and helped define internal coding standards
-	\item Exit via an acquisition
+	\item Exit via acquisition by Spotify
 	\end{itemize}
 }
 \cventry{2014-2015}{Revinate, Inc}{Software Engineer}{San Francisco, CA}
@@ -106,7 +106,7 @@
 	\item Lead development of a critical partner integration project within first 9 months
 	\item Drove several improvement projects, such as packaging xDebug for internal use, fixing our broken usage of Composer and modernizing our Javascript environment
 	\item Mentored a new engineer within first 12 months
-	\end{itemize}	
+	\end{itemize}
 }
 \cventry{2012-2014}{Google Inc.}{Internal Technology Resident}{Mountain View, CA}
 	{Fixed-Term Residency supporting and improving Google's infrastructure}{
