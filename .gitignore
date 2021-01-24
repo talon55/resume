@@ -5,3 +5,4 @@ build/
 *.pdf
 *.synctex.gz
 *.swp
+.DS_Store
