@@ -1,13 +1,25 @@
 %% start of file `coverletter.tex'.
-% !TEX root = coverletter.tex
+% !TEX root = presentation/coverletter_only.tex
 
-\input{config.tex}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 
-\begin{document}
+% recipient data
+\recipient{Guy Bayes}
+	{Vibrant Planet
+	\\11025 Pioneer Trail
+    \\Suite 206
+	\\Truckee, CA 96161}
 
-\input{coverletter_content.tex}
+\date{February 17, 2024}
+\opening{Dear Mr. Bayes,}
+\closing{Sincerely,}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
 
-\end{document}
+Lorum ipsum...
 
+\makeletterclosing
+
+%\clearpage\end{CJK*} % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 
 %% end of file `coverletter.tex'.

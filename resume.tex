@@ -1,12 +1,82 @@
 %% start of file `resume.tex'.
-% !TEX root = resume.tex
+% !TEX root = presentation/resume_only.tex
 
-\input{config.tex}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+\makecvtitle
 
-\begin{document}
+\section{Experience}
+\cventry{2021-2023}{Spotify USA Inc.}{Senior Engineer}{Oakland, CA}
+	{Tech Lead position}{
+	\begin{itemize}
+	\item Defined the technical strategy for a product area of 22 (13 engineers), incl. system design and mentoring
+	\item Continued development of the WebView feature from a proof-of-concept to a production feature which powered \textcolor{color1}{\href{https://newsroom.spotify.com/2023-10-18/spotifys-interactive-experiences-create-the-magic-of-wrapped-year-round/}{many high-profile campaigns}}, including 2023 Wrapped, and brought in >\$50MM in 2023
+	\item Led a company priority project (incl. 8 cross-functional teams) to place video ads on smart TVs (eg. Roku)
+	\end{itemize}
+	}
+\cventry{2020-2021}{Spotify USA Inc.}{Engineer II}{Oakland, CA}
+	{Full-stack experimentation position (Java/Android/iOS/Typescript)}{
+	\begin{itemize}
+	\item Developed a custom WebView feature in the Spotify Music app (Android and iOS) to test a UX hypothesis
+	\item Ran a public-facing alpha test targeting 50\% of Canadian users and demonstrated 178\% increased engagement
+	\item Mentored a junior coworker in frontend (React.js) and backend (Java) web development
+	\end{itemize}
+	}
+\cventry{2019}{Spotify USA Inc.}{Engineer II}{Oakland, CA}
+	{Backend web development position (Java/SQL)}{
+	\begin{itemize}
+	\item Acted as the technical owner and principal architect on a team which developed a service that placed ads targeted using first-party listening data on third-party platforms
+	\item Worked directly with contacts at Facebook to ensure compatibility with their ad network
+	\end{itemize}
+}
 
-\input{resume_content.tex}
+\cventry{2016-2018}{Spotify USA Inc.}{Engineer I}{San Francisco, CA}
+	{Full-stack web development position (React.js/Java)}{}
+\cventry{2016}{Preact, Inc}{Software Engineer}{San Francisco, CA}
+	{Lead frontend web development position (React.js)}{}
+\cventry{2014-2015}{Revinate, Inc}{Software Engineer}{San Francisco, CA}
+	{Full-stack web development position (PHP)}{}
+\cventry{2012-2014}{Google Inc.}{Internal Technology Resident}{Mountain View, CA}
+	{Fixed-Term Residency supporting and improving Google's infrastructure}{}
+%\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+%\subsection{Miscellaneous}
 
-\end{document}
+\section{Education}
+\cventry{2008-2012}{Johns Hopkins University}{Bachelor of Science}{Baltimore, MD}{\textit{GPA: 3.64}}{Biomedical Engineering with Instrumentation (Electrical Engineering) focus}  % arguments 3 to 6 can be left empty
+
+\section{Skills}
+\begin{cvcolumns}
+  \cvcolumn{Languages}{
+  \begin{itemize}
+	\item Java
+	\item SQL
+	\item Typescript
+	\item Kotlin/Swift
+  \end{itemize}
+  }
+ \cvcolumn{Frameworks}{
+ \begin{itemize}
+	\item Spotify Apollo
+	\item React.js
+	\item Android
+	\item iOS
+ \end{itemize}
+ }
+  \cvcolumn{DevOps}{
+  \begin{itemize}
+    \item Linux
+    \item PostgreSQL
+    \item Docker/Kubernetes
+    \item Google Cloud Platform
+  \end{itemize}
+  }
+%  \cvcolumn{Hardware}{
+%  \begin{itemize}
+%  	\item Circuit Design
+%  	\item  PCB Layout Design
+%  \end{itemize}
+%  }
+\end{cvcolumns}
+
+%\clearpage\end{CJK*} % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 
 %% end of file `resume.tex'.
