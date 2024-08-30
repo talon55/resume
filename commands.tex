@@ -1,0 +1,17 @@
+%% start of the file `commands.tex'.
+% !TEX root = presentation/coverletter_only.tex
+
+%% This file includes all custom code used by documents in this project
+
+% Add signature to closing
+\renewcommand*{\makeletterclosing}{
+    \@closing%\\[1em]
+    \includegraphics[height=3em]{../assets/signature.png}
+    {\bfseries \@firstname~\@lastname}
+    \ifthenelse{\isundefined{\@enclosure}}{}{
+    \\
+    \vfill
+    {\color{color2}\itshape\enclname: \@enclosure}}
+}
+
+%% end of the file `commands.tex'.
