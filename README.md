@@ -8,7 +8,7 @@ extension, and the [Multi-File projects](https://github.com/James-Yu/LaTeX-Works
 
 Compiling this repo requires a local LaTeX installation, including the following packages:
 ```
-sudo apt install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk cm-super
+sudo apt install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk cm-super chktex
 ```
 
 ## Troubleshooting
